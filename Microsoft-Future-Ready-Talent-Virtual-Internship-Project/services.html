@@ -1,57 +1,193 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Dhanvantri - providing affordable healthcare services</title>
+    <title>Dhanvantri Hospital </title>
 
     <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style-starter.css">
-  </head>
-  <body>
-<section class="w3l-bootstrap-header">
-  <nav class="navbar navbar-expand-md navbar-light py-3">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="assets/images/award.png" class="img-fluid" width="52px">
-        Dhanvantri Hospital</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    
+   <style>
+    /* Style for the floating chat bot button */
+    .chat-bot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+
+    /* Hover effect */
+    .chat-bot-button:hover {
+        background-color: #45a049;
+    }
+
+    /* Style for the chat bot iframe */
+    #chat-bot-iframe {
+        position: fixed;
+        bottom: 50px;
+        right: 40px; /* Moved slightly to the left */
+        width: calc(100% - 80px); /* Adjusted width to create a gap from both sides */
+        max-width: 300px;
+        height: 530px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Floating Chat Bot Button -->
+<button class="chat-bot-button" onclick="toggleChatBot()">Talk with Health Bot!</button>
+
+<!-- Chat Bot Iframe -->
+<iframe id="chat-bot-iframe" src="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" allow="microphone; camera;"></iframe>
+
+<script>
+    var chatBotIframe = document.getElementById('chat-bot-iframe');
+
+    function toggleChatBot() {
+        if (chatBotIframe.style.display === 'none') {
+            chatBotIframe.style.display = 'block';
+        } else {
+            chatBotIframe.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<section class="w3l-bootstrap-header">
+ <nav class="navbar navbar-expand-md navbar-light py-3">
+    <div class="container">
+        <!-- Logo and Brand -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/award.png" class="img-fluid" width="52px" alt="Dhanvantri Hospital Logo">
+            Dhanvantri Hospital
+        </a>
+        
+        <!-- Toggler Button for small screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+        </button>
+
+      <style>
+    .custom-navbar {
+        margin-left: -320px; /* Adjust this value as needed for left shift */
+        margin-top: 70px; /* Adjust this value as needed for downward shift */
+    }
+
+    .custom-navbar .navbar-nav {
+        padding-left: 0; /* Remove default padding */
+    }
+</style>
+
+<div class="collapse navbar-collapse custom-navbar" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
             <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item active">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
-		     <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/">HealthBot</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="healthinsurance.html">Health Insurance</a>
+      </li>
+        <li class="nav-item">
             <a class="nav-link" href="login.html">Login/Signup</a>
-          </li>
-        </ul>
-      </div>
-      <a href="#domain" class="domain ml-3" data-toggle="modal" data-target="#DomainModal">
-        <div class="hamburger1">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </a>
-    </div>
-  </nav>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="copyright.html">MIT License</a>
+      </li>
+    </ul>
+</div>
+
+
+</nav>
+
 </section>
+ <style>
+    /* Style for the floating chat bot button */
+    .chat-bot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+
+    /* Hover effect */
+    .chat-bot-button:hover {
+        background-color: #45a049;
+    }
+
+    /* Style for the chat bot iframe */
+    #chat-bot-iframe {
+        position: fixed;
+        bottom: 50px;
+        right: 40px; /* Moved slightly to the left */
+        width: calc(100% - 80px); /* Adjusted width to create a gap from both sides */
+        max-width: 300px;
+        height: 530px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Floating Chat Bot Button -->
+<button class="chat-bot-button" onclick="toggleChatBot()">Talk with Health Bot!</button>
+
+<!-- Chat Bot Iframe -->
+<iframe id="chat-bot-iframe" src="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" allow="microphone; camera;"></iframe>
+
+<script>
+    var chatBotIframe = document.getElementById('chat-bot-iframe');
+
+    function toggleChatBot() {
+        if (chatBotIframe.style.display === 'none') {
+            chatBotIframe.style.display = 'block';
+        } else {
+            chatBotIframe.style.display = 'none';
+        }
+    }
+</script>
+
 
 <div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
   <div class="modal-dialog" role="document">
@@ -64,7 +200,7 @@
         <div class="modal__content">
           <h2 class="logo"><img src="assets/images/award.png" class="img-fluid"> Dhanvantri Hospital</h2>
 
-          <p class="mt-md-3 mt-2">Lorem ipsum dolor sit amet, elit. Eos expedita ipsam at fugiat ab.</p>
+          <p class="mt-md-3 mt-2"></p>
           <div class="widget-menu-items mt-sm-5 mt-4">
             <h5 class="widget-title">Menu Items</h5>
             <nav class="navbar p-0">
@@ -143,8 +279,12 @@
                     <div class="icon"> <img src="assets/images/s1.png" class="img-fluid"></div>
                     <div class="icon-info">
                         <h5><a href="#url">Heart Diseases</a></h5>
-                        <p>Lorem, ipsum dolor sit amet consec tetur adipis icing elit. sed pariatur magnam omnis
-                            minima.</p>
+                        <p>At Dhanvantri Hospital, we specialize in the diagnosis, treatment, and management of heart disease. 
+                          Our dedicated team of cardiologists and healthcare professionals provides expert care for patients with various 
+                          cardiovascular conditions, including coronary artery disease, heart failure, arrhythmias, and valvular heart disease. 
+                          With state-of-the-art facilities and advanced treatment options, we are committed to helping our patients achieve better heart 
+                          health and improved quality of life.
+                        </p>
                     </div>
 
                 </div>
@@ -152,24 +292,31 @@
                     <div class="icon"> <img src="assets/images/s2.png" class="img-fluid"></div>
                     <div class="icon-info">
                         <h5><a href="#url">Pharmocology</a></h5>
-                        <p>Lorem, ipsum dolor sit amet consec tetur adipis icing elit. sed pariatur magnam omnis
-                            minima.</p>
+                        <p>
+                          At Dhanvantri Hospital, our pharmacology expertise ensures precise medication management, 
+                          optimizing patient outcomes with tailored treatment plans and vigilant monitoring. 
+                          Trust in our pharmacists for safe and effective medication administration and counseling, 
+                          enhancing your health journey.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 float-rt feature-gd mt-lg-0 mt-sm-5 mt-4">
                     <div class="icon"> <img src="assets/images/s3.png" class="img-fluid"></div>
                     <div class="icon-info">
                         <h5><a href="#url">Cardiology</a></h5>
-                        <p>Lorem, ipsum dolor sit amet consec tetur adipis icing elit. sed pariatur magnam omnis
-                            minima.</p>
+                        <p>Dhanvantri Hospital's cardiology department offers cutting-edge diagnostic and treatment services for various 
+                          heart conditions, ensuring comprehensive care and personalized treatment plans tailored to each patient's needs.
+                           Our team of skilled cardiologists is committed to delivering excellence in cardiac care, prioritizing patient 
+                           well-being and cardiac health above all else.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 float-lt feature-gd mt-sm-5 mt-4">
                     <div class="icon"> <img src="assets/images/s4.png" class="img-fluid"></div>
                     <div class="icon-info">
                         <h5><a href="#url"> Dentistry</a></h5>
-                        <p>Lorem, ipsum dolor sit amet consec tetur adipis icing elit. sed pariatur magnam omnis
-                            minima.</p>
+                        <p>At Dhanvantri Hospital, our dentistry services offer compassionate care and expertise to ensure optimal oral 
+                          health. Our team of skilled dentists provides a comprehensive range of dental treatments, including preventive 
+                          care, restorative procedures, and cosmetic dentistry, all delivered with a focus on patient comfort and 
+                          satisfaction. Trust us for your smile's well-being.</p>
                     </div>
 
                 </div>
@@ -178,8 +325,10 @@
                     <div class="icon-info">
                         <h5><a href="#url">Eye Surgery</a>
                         </h5>
-                        <p>Lorem, ipsum dolor sit amet consec tetur adipis icing elit. sed pariatur magnam omnis
-                            minima.</p>
+                        <p>At Dhanvantri Hospital, we offer advanced and specialized eye surgery services to address a wide range of 
+                          ocular conditions and vision concerns. Our team of skilled ophthalmologists and eye care professionals is 
+                          dedicated to providing safe, effective, and personalized treatment options to improve your vision and enhance 
+                          your quality of life.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 float-rt feature-gd mt-sm-5 mt-4">
@@ -187,8 +336,9 @@
                     <div class="icon-info">
                         <h5><a href="#url">Virusology</a>
                         </h5>
-                        <p>Lorem, ipsum dolor sit amet consec tetur adipis icing elit. sed pariatur magnam omnis
-                            minima.</p>
+                        <p>At Dhanvantri Hospital, we specialize in cutting-edge virusology research and diagnostics, 
+                          offering swift and accurate detection methods for viral infections. Our dedicated team is committed to 
+                          advancing knowledge and providing effective treatments for a variety of viral illnesses.</p>
                     </div>
                 </div>
             </div>
@@ -207,8 +357,8 @@
 						<img src="assets/images/s1.jpg" class="img-fluid" alt="" />
 						<div class="service-info">
 							<h4 class="course">Blood Test</h4>
-							<p>Lorem ipsum dolor sit amet consect etur, adipisicing. Enim, mollitia!</p>
-							<a href="#url" class="feature-link">Read more <span class="fa fa-long-arrow-right"></span></a>
+							<p></p>
+							<a href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" class="feature-link">Book With AI <span class="fa fa-long-arrow-right"></span></a>
 						</div>
 					</a>
 				</div>
@@ -217,8 +367,8 @@
 						<img src="assets/images/s2.jpg" class="img-fluid" alt="" />
 						<div class="service-info">
 							<h4 class="course">Urology</h4>
-							<p>Lorem ipsum dolor sit amet consect etur, adipisicing. Enim, mollitia!</p>
-							<a href="#url" class="feature-link">Read more <span class="fa fa-long-arrow-right"></span></a>
+							<p></p>
+							<a href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" class="feature-link">Book With AI <span class="fa fa-long-arrow-right"></span></a>
 						</div>
 					</a>
 				</div>
@@ -227,8 +377,8 @@
 						<img src="assets/images/blog1.jpg" class="img-fluid" alt="" />
 						<div class="service-info">
 							<h4 class="course">Dental</h4>
-							<p>Lorem ipsum dolor sit amet consect etur, adipisicing. Enim, mollitia!</p>
-							<a href="#url" class="feature-link">Read more <span class="fa fa-long-arrow-right"></span></a>
+							<p></p>
+							<a href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" class="feature-link">Book With AI <span class="fa fa-long-arrow-right"></span></a>
 						</div>
 					</a>
 				</div>
@@ -237,8 +387,8 @@
 						<img src="assets/images/s3.jpg" class="img-fluid" alt="" />
 						<div class="service-info">
 							<h4 class="course">Sports Injury</h4>
-							<p>Lorem ipsum dolor sit amet consect etur, adipisicing. Enim, mollitia!</p>
-							<a href="#url" class="feature-link">Read more <span class="fa fa-long-arrow-right"></span></a>
+							<p></p>
+							<a href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" class="feature-link">Book With AI <span class="fa fa-long-arrow-right"></span></a>
 						</div>
 					</a>
 				</div>
@@ -247,8 +397,8 @@
 						<img src="assets/images/blog2.jpg" class="img-fluid" alt="" />
 						<div class="service-info">
 							<h4 class="course">General Surgery</h4>
-							<p>Lorem ipsum dolor sit amet consect etur, adipisicing. Enim, mollitia!</p>
-							<a href="#url" class="feature-link">Read more <span class="fa fa-long-arrow-right"></span></a>
+							<p></p>
+							<a href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" class="feature-link">Book With AI <span class="fa fa-long-arrow-right"></span></a>
 						</div>
 					</a>
 				</div>
@@ -257,8 +407,8 @@
 						<img src="assets/images/s4.jpg" class="img-fluid" alt="" />
 						<div class="service-info">
 							<h4 class="course">Lung Diseases</h4>
-							<p>Lorem ipsum dolor sit amet consect etur, adipisicing. Enim, mollitia!</p>
-							<a href="#url" class="feature-link">Read more <span class="fa fa-long-arrow-right"></span></a>
+							<p></p>
+							<a href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" class="feature-link">Book With AI <span class="fa fa-long-arrow-right"></span></a>
 						</div>
 					</a>
 				</div>
@@ -329,7 +479,7 @@
       </div>
       <div class="midd-footer-28 align-center py-lg-4 py-3 mt-md-5 mt-3">
         <div class="container">
-          <p class="copy-footer-28 text-center"> &copy; 2023 dhanvantri. All Rights Reserved & Design by CyberX </p>
+          <p class="copy-footer-28 text-center"> &copy; 2024 dhanvantri. All Rights Reserved & Design by FRT </p>
         </div>
       </div>
       </div>

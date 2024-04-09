@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-size: 30px;
+
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .insurance-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .insurance-card h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .insurance-card p {
+            color: #666;
+        }
+
+        .insurance-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+     <style>
+        /* Style for the floating chat bot button */
+        .chat-bot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+        }
+    
+        /* Hover effect */
+        .chat-bot-button:hover {
+            background-color: #45a049;
+        }
+    
+        /* Style for the chat bot iframe */
+        #chat-bot-iframe {
+            position: fixed;
+            bottom: 50px;
+            right: 40px; /* Moved slightly to the left */
+            width: calc(100% - 80px); /* Adjusted width to create a gap from both sides */
+            max-width: 300px;
+            height: 530px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Floating Chat Bot Button -->
+<button class="chat-bot-button" onclick="toggleChatBot()">Talk with Health Bot!</button>
+
+<!-- Chat Bot Iframe -->
+<iframe id="chat-bot-iframe" src="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" allow="microphone; camera;"></iframe>
+
+<script>
+    var chatBotIframe = document.getElementById('chat-bot-iframe');
+
+    function toggleChatBot() {
+        if (chatBotIframe.style.display === 'none') {
+            chatBotIframe.style.display = 'block';
+        } else {
+            chatBotIframe.style.display = 'none';
+        }
+    }
+</script>
+
+    <section class="w3l-bootstrap-header">
+        <nav class="navbar navbar-expand-md navbar-light py-3">
+           <div class="container">
+               <!-- Logo and Brand -->
+               <a class="navbar-brand" href="index.html">
+                   <img src="assets/images/award.png" class="img-fluid" width="52px" alt="Dhanvantri Hospital Logo">
+                   Dhanvantri Hospital
+               </a>
+               
+               <!-- Toggler Button for small screens -->
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   Menu
+               </button>
+       
+             <style>
+           .custom-navbar {
+               margin-left: -320px; /* Adjust this value as needed for left shift */
+               margin-top: 70px; /* Adjust this value as needed for downward shift */
+           }
+       
+           .custom-navbar .navbar-nav {
+               padding-left: 0; /* Remove default padding */
+           }
+       </style>
+       
+       <div class="collapse navbar-collapse custom-navbar" id="navbarSupportedContent">
+           <ul class="navbar-nav">
+               <li class="nav-item active">
+                   <a class="nav-link" href="index.html">Home</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="about.html">About</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="services.html">Services</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="contact.html">Contact</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/">HealthBot</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="healthinsurance.html">Health Insurance</a>
+             </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="login.html">Login/Signup</a>
+               </li>
+               <li class="nav-item">
+                <a class="nav-link" href="copyright.html">MIT License</a>
+            </li>
+           </ul>
+       </div>
+       </nav>
+       <header>
+        <h1>Health Insurance Plans</h1>
+    </header>
+    <div class="container">
+        <div class="insurance-card">
+            <h2>Dhanvantri Hospital Basic Health Insurance</h2>
+            <img src="assets/images/healthinsurancebasic.jpg" alt="Dhanvantri Hospital Basic Health Insurance">
+            <p>Dhanvantri Hospital Basic Health Insurance provides essential coverage for medical expenses, including hospital stays, doctor visits, and prescription medications. With affordable premiums and comprehensive benefits, you can have peace of mind knowing that you're protected against unexpected healthcare costs.</p>
+            <p>Price: 1000rs/month</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="insurance-card">
+            <h2>Comprehensive Health Insurance</h2>
+            <img src="assets/images/comprehensive.jpg" alt="Comprehensive Health Insurance">
+            <p>Our Comprehensive Health Insurance plan offers extensive coverage for a wide range of medical needs. From routine check-ups to specialized treatments, this plan ensures that you and your family have access to the best healthcare services available. With affordable premiums and comprehensive benefits, you can enjoy peace of mind knowing that your health is in good hands.</p>
+            <p>Price: 2500rs/month</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Health Insurance Dhanvatri Hospital. All rights reserved for Microsoft FRT Microsoft-Future-Ready-Talent-Internship-Project.</p>
+    </footer>
+</body>
+</html>

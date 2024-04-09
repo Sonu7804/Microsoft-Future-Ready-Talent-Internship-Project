@@ -5,57 +5,128 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Dhanvantri - providing affordable healthcare services </title>
+    <title>Dhanvantri Hospital </title>
 
     <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style-starter.css">
     
-  </head>
-  <body>
+   <style>
+    /* Style for the floating chat bot button */
+    .chat-bot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+
+    /* Hover effect */
+    .chat-bot-button:hover {
+        background-color: #45a049;
+    }
+
+    /* Style for the chat bot iframe */
+    #chat-bot-iframe {
+        position: fixed;
+        bottom: 50px;
+        right: 40px; /* Moved slightly to the left */
+        width: calc(100% - 80px); /* Adjusted width to create a gap from both sides */
+        max-width: 300px;
+        height: 530px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Floating Chat Bot Button -->
+<button class="chat-bot-button" onclick="toggleChatBot()">Talk with Health Bot!</button>
+
+<!-- Chat Bot Iframe -->
+<iframe id="chat-bot-iframe" src="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" allow="microphone; camera;"></iframe>
+
+<script>
+    var chatBotIframe = document.getElementById('chat-bot-iframe');
+
+    function toggleChatBot() {
+        if (chatBotIframe.style.display === 'none') {
+            chatBotIframe.style.display = 'block';
+        } else {
+            chatBotIframe.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
+
 <section class="w3l-bootstrap-header">
-  <nav class="navbar navbar-expand-md navbar-light py-3">
+ <nav class="navbar navbar-expand-md navbar-light py-3">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="assets/images/award.png" class="img-fluid" width="52px">
-        Dhanvantri Hospital</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-      </button>
+        <!-- Logo and Brand -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/award.png" class="img-fluid" width="52px" alt="Dhanvantri Hospital Logo">
+            Dhanvantri Hospital
+        </a>
+        
+        <!-- Toggler Button for small screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+      <style>
+    .custom-navbar {
+        margin-left: -320px; /* Adjust this value as needed for left shift */
+        margin-top: 70px; /* Adjust this value as needed for downward shift */
+    }
+
+    .custom-navbar .navbar-nav {
+        padding-left: 0; /* Remove default padding */
+    }
+</style>
+
+<div class="collapse navbar-collapse custom-navbar" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
             <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
-		   <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/">HealthBot</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="healthinsurance.html">Health Insurance</a>
+      </li>
+        <li class="nav-item">
             <a class="nav-link" href="login.html">Login/Signup</a>
-          </li>
-          
-        </ul>
-      </div>
-      <a href="#domain" class="domain ml-3" data-toggle="modal" data-target="#DomainModal">
-        <div class="hamburger1">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </a>
-    </div>
-  </nav>
-</section>
-
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="copyright.html">MIT License</a>
+      </li>
+    </ul>
+</div>
+</nav>
 <div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -66,7 +137,6 @@
       <div class="modal-body">
         <div class="modal__content">
           <h2 class="logo"><img src="assets/images/award.png" class="img-fluid">Dhanvantri Hospital</h2>
-
           <p class="mt-md-3 mt-2"></p>
           <div class="widget-menu-items mt-sm-5 mt-4">
             <h5 class="widget-title">Menu Items</h5>
@@ -87,8 +157,7 @@
 
                 <li class="nav-item">
                   <a class="nav-link" href="login.html">Login/Signup</a>
-                </li>
-                
+                </li>  
               </ul>
             </nav>
           </div>
@@ -114,18 +183,84 @@
           <div class="widget-social-icons mt-sm-5 mt-4">
             <h5 class="widget-title">Follow Us</h5>
             <ul class="icon-rounded">
-              <li><a class="social-link twitter" href="#url" target="_blank"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="social-link linkedin" href="#url" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-              <li><a class="social-link tumblr" href="#url" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+              <li><a class="social-link twitter" href="@athrva_deshmukh" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="social-link linkedin" href="https://www.linkedin.com/in/athrva-deshmukh/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="social-link fa-github" href="https://github.com/athrvadeshmukh/Microsoft-Future-Ready-Talent-Internship-Project.git" target="_blank"><i class="fa fa-github"></i></a></li>
             </ul>
           </div>
-
-
         </div>
       </div>
     </div>
   </div>
 </div>
+<section class="w3l-apply-6" id="appointment">
+
+	<div class="apply-info py-5">
+		<div class="container py-lg-5 py-sm-3">
+			<div class="apply-grids-info row">
+				<div class="apply-gd-left col-lg-5">
+					<h4>Make an appointment</h4>
+					<p class="para-apply">We will send you a confirmation within few seconds use our health bot service .
+						<br><strong>Emergency?</strong> Call 1-2554-2356-33
+					</p>
+					<div class="mt-lg-5 mt-4">
+						<div class="sub-apply mt-5">
+							<div class="apply-sec-info">
+								<div class="icon">
+									<img src="assets/images/icon1.png" class="img-fluid">
+								</div>
+								<div class="appyl-sub-icon-info">
+									<h5><a href="blog-single.html">Immune system</a></h5>
+									<p></p>
+									<a href="#" class="learn">Learn More <i class="fa fa-long-arrow-right ml-2"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="sub-apply mt-5">
+							<div class="apply-sec-info">
+								<div class="icon">
+									<img src="assets/images/nutri.png" class="img-fluid">
+								</div>
+								<div class="appyl-sub-icon-info">
+									<h5><a href="blog-single.html">Nutrition</a></h5>
+									<p></p>
+									<a href="#" class="learn">Learn More <i class="fa fa-long-arrow-right ml-2"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		<div class="apply-gd-right offset-lg-1 col-lg-6 mt-lg-0 mt-5">
+					<div class="apply-form p-sm-5 p-4">
+						<h5>Fill the form for appointment form using our health bot service </h5>
+						<form action="#" method="post">
+							<div class="admission-form">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Full Name*" required="">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Phone Number*" required="">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" placeholder="Email*" required="">
+								</div>
+								<select class="form-control">
+									<option>Select Disease</option>
+									<option>Lung disease</option>
+									<option>Others</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<textarea name="Comment" class="form-control" placeholder="Message*" required=""></textarea>
+							</div>
+							<a href= "login.html"button type="submit" class="btn btn-primary submit">Submit Now</a></button>
+						</form>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <section class="w3l-main-slider" id="home">
   <div class="companies20-content">
    
@@ -199,9 +334,9 @@
           <div class="container">
               <div class="row">
                   <div class="col-lg-8 w3l-features-photo-7_top-left">
-                      <h2>Dr.Kabir Singh</h2>
-                      <p class="mb-lg-5 mb-4">Orthopedic Surgeon (M.B.B.S)</p>
-                      <h4>Dr. Kabir Singh is a medical professional who specializes in the prevention, diagnosis, and treatment of
+                      <h2>Dr.Arjun Reddy</h2>
+                      <p class="mb-lg-5 mb-4">Neurologist Specialist</p>
+                      <h4>Arjun Reddy is a medical professional who specializes in the prevention, diagnosis, and treatment of
                          disorders of the musculoskeletal system. This system includes the bones, joints, ligaments, tendons, and nerves
                       </h4>
                       <p>
@@ -252,30 +387,32 @@
           </div>
       </div>
   </section>
-<section class="w3l-video-sec">
-	<div class="video-inner py-5">
-		<div class="overlay1 py-lg-5 py-sm-3">
-			<div class="container">
-				<div class="video-content">
-					<img src="assets/images/heart-big.png" class="img-fluid" alt="" />
-					<h4><a href="#url">We Provide High Quality Services.</a></h4>
-					<p></p>
-					<a href="#notify" class="play-button btn"><span class="fa fa-play pl-1" aria-hidden="true">
-						</span></a>
+  <section class="w3l-video-sec">
+    <div class="video-inner py-5">
+        <div class="overlay1 py-lg-5 py-sm-3">
+            <div class="container">
+                <div class="video-content">
 
-					<div id="notify" class="notify-pop-overlay">
-						<div class="notify-popup">
-							<h5>Excellent Health Care Systems</h5>
-							<iframe src="https://player.vimeo.com/video/180825357" frameborder="0"
-								allow="autoplay; fullscreen" allowfullscreen></iframe>
-							<a class="close" href="#close">&times;</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    <h4><a href="#url">Website Demo Video</a></h4>
+                    <p></p>
+                    <a href="#notify" class="play-button btn"><span class="fa fa-play pl-1" aria-hidden="true"></span></a>
+
+                    <div id="notify" class="notify-pop-overlay">
+                        <div class="notify-popup">
+                            <h5>Microsoft-Future-Ready-Talent-Internship-Project Demo Video</h5>
+                            <div class="video-container">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Yh6GvvbU2ww?si=P-cQ2uNbwBTFgUOl" title="YouTube video player" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <a class="close" href="#close">&times;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
 <section class="w3l-features py-5">
     <div class="container py-lg-5 py-3">
         <div class="row main-cont-wthree-2">
@@ -318,100 +455,12 @@
         </div>
     </div>
 </section>
-<section class="w3l-apply-6" id="appointment">
-
-	<div class="apply-info py-5">
-		<div class="container py-lg-5 py-sm-3">
-			<div class="apply-grids-info row">
-				<div class="apply-gd-left col-lg-5">
-					<h4>Make an appointment</h4>
-					<p class="para-apply">We will send you a confirmation within few seconds use our health bot service .
-						<br><strong>Emergency?</strong> Call 1-2554-2356-33
-					</p>
-					<div class="mt-lg-5 mt-4">
-						<div class="sub-apply mt-5">
-							<div class="apply-sec-info">
-								<div class="icon">
-									<img src="assets/images/icon1.png" class="img-fluid">
-								</div>
-								<div class="appyl-sub-icon-info">
-									<h5><a href="blog-single.html">Immune system</a></h5>
-									<p>Lorem ipsum dolor sit amet,Ea a diam et dui elit, orci urna vel id neque. Donec
-										sed enim.</p>
-									<a href="#url" class="learn">Learn More <i class="fa fa-long-arrow-right ml-2"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="sub-apply mt-5">
-							<div class="apply-sec-info">
-								<div class="icon">
-									<img src="assets/images/sthethoscope.png" class="img-fluid">
-								</div>
-								<div class="appyl-sub-icon-info">
-									<h5><a href="blog-single.html">Nutrition</a></h5>
-									<p>Lorem ipsum dolor sit amet,Ea a diam et dui elit, orci urna vel id neque. Donec
-										sed enim.</p>
-									<a href="#url" class="learn">Learn More <i class="fa fa-long-arrow-right ml-2"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-		<!--<div class="apply-gd-right offset-lg-1 col-lg-6 mt-lg-0 mt-5">
-					<div class="apply-form p-sm-5 p-4">
-						<h5>Fill the form for appointment form using our health bot service </h5>
-						<form action="#" method="post">
-							<div class="admission-form">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Full Name*" required="">
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Phone Number*" required="">
-								</div>
-								<div class="form-group">
-									<input type="email" class="form-control" placeholder="Email*" required="">
-								</div>
-								<select class="form-control">
-									<option>Select Disease</option>
-									<option>Lung disease</option>
-									<option>Others</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<textarea name="Comment" class="form-control" placeholder="Message*" required=""></textarea>
-							</div>
-							<button type="submit" class="btn btn-primary submit">Submit Now</button>
-						</form>
-					</div> -->	
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section class="w3l-call-to-action_9 py-5">
     <div class="call-w3">
         <div class="container">
             <div class=" main-cont-wthree-2">
                 <div class="left-contect-calls text-center">
-                    <h3 class="title mb-sm-5 mb-4">Certificates & Standards</h3>
-                  <div class="call-grids-w3 ">
-                        <a href="#url" class="">
-                            <img src="assets/images/logo1.png" class="img-fluid" alt="">
-                        </a>
-
-                        <a href="#url" class="">
-                            <img src="assets/images/logo2.png" class="img-fluid" alt="">
-                        </a>
-                        <a href="#url" class="">
-                            <img src="assets/images/logo3.png" class="img-fluid" alt="">
-                        </a>
-                        <a href="#url" class="">
-                            <img src="assets/images/logo4.png" class="img-fluid" alt="">
-                        </a>
-                        <a href="#url" class="">
-                            <img src="assets/images/logo5.png" class="img-fluid" alt="">
-                        </a>
+  
                     </div>
                 </div>
             </div>
@@ -472,13 +521,11 @@
       </div>
       <div class="midd-footer-28 align-center py-lg-4 py-3 mt-md-5 mt-3">
         <div class="container">
-          <p class="copy-footer-28 text-center"> &copy; 2023 dhanvantri. All Rights Reserved & Design by CyberX </p>
+          <p class="copy-footer-28 text-center"> &copy; 2024 dhanvantri. All Rights Reserved & Design for Frt Projects </p>
         </div>
       </div>
       </div>
-      <iframe src='https://webchat.botframework.com/embed/healthbot-0s8k7ac?s=1CtOR6vcLS8.zv5psbn_ha70aSO7B4jkRL03eBNuH8to8dZ61uK5lBM' 
-                      style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
-    </footer>
+   
 
     <button onclick="topFunction()" id="movetop" title="Go to top">
       &#10548;

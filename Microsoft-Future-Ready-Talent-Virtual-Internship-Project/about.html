@@ -1,57 +1,135 @@
-
+<!--  This Page belongs to dhanvantri hospital -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Dhanvantri - providing affordable healthcare services</title>
+    <title>Dhanvantri Hospital </title>
 
     <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style-starter.css">
-  </head>
-  <body>
+    
+   <style>
+    /* Style for the floating chat bot button */
+    .chat-bot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+
+    /* Hover effect */
+    .chat-bot-button:hover {
+        background-color: #45a049;
+    }
+
+    /* Style for the chat bot iframe */
+    #chat-bot-iframe {
+        position: fixed;
+        bottom: 50px;
+        right: 40px; /* Moved slightly to the left */
+        width: calc(100% - 80px); /* Adjusted width to create a gap from both sides */
+        max-width: 300px;
+        height: 530px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Floating Chat Bot Button -->
+<button class="chat-bot-button" onclick="toggleChatBot()">Talk with Health Bot!</button>
+
+<!-- Chat Bot Iframe -->
+<iframe id="chat-bot-iframe" src="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/" allow="microphone; camera;"></iframe>
+
+<script>
+    var chatBotIframe = document.getElementById('chat-bot-iframe');
+
+    function toggleChatBot() {
+        if (chatBotIframe.style.display === 'none') {
+            chatBotIframe.style.display = 'block';
+        } else {
+            chatBotIframe.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
+
 <section class="w3l-bootstrap-header">
-  <nav class="navbar navbar-expand-md navbar-light py-3">
+ <nav class="navbar navbar-expand-md navbar-light py-3">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="assets/images/award.png" class="img-fluid" width="52px">
-        Dhanvantri Hospital</a>
+        <!-- Logo and Brand -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/award.png" class="img-fluid" width="52px" alt="Dhanvantri Hospital Logo">
+            Dhanvantri Hospital
+        </a>
+        
+        <!-- Toggler Button for small screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+        </button>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-      </button>
+      <style>
+    .custom-navbar {
+        margin-left: -320px; /* Adjust this value as needed for left shift */
+        margin-top: 70px; /* Adjust this value as needed for downward shift */
+    }
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+    .custom-navbar .navbar-nav {
+        padding-left: 0; /* Remove default padding */
+    }
+</style>
+
+<div class="collapse navbar-collapse custom-navbar" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
             <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item active">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
-		     <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="https://healthcare-bot-4zh3cgtuvfxc6.azurewebsites.net/">HealthBot</a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="healthinsurance.html">Health Insurance</a>
+      </li>
+        <li class="nav-item">
             <a class="nav-link" href="login.html">Login/Signup</a>
-          </li>
-        </ul>
-      </div>
-      <a href="#domain" class="domain ml-3" data-toggle="modal" data-target="#DomainModal">
-        <div class="hamburger1">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </a>
-    </div>
-  </nav>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="copyright.html">MIT License</a>
+      </li>
+    </ul>
+</div>
+
+
+</nav>
+
 </section>
 
 
@@ -67,7 +145,7 @@
         <div class="modal__content">
           <h2 class="logo"><img src="assets/images/award.png" class="img-fluid">Dhanvantri Hospital</h2>
 
-          <p class="mt-md-3 mt-2">Lorem ipsum dolor sit amet, elit. Eos expedita ipsam at fugiat ab.</p>
+          <p class="mt-md-3 mt-2"></p>
           <div class="widget-menu-items mt-sm-5 mt-4">
             <h5 class="widget-title">Menu Items</h5>
             <nav class="navbar p-0">
@@ -143,10 +221,11 @@
 				<div class="col-lg-8 content-left">
 					<h4>We Offer a full range of Professional mental Health services to children, Adults,
                         Couples, and Families.</h4>
-					<p class="mb-0">Donec luctus rhoncus dignissim. Integer blandit mattis arcu, id viverra orci condimentum a.
-						Quisque nibh tortor, mollis placerat semper ac, auctor quis mauris. Praesent dignissim sed
-						magna eu urna consectetur, at pretium nisi aliquet. Sed vestibulum malesuada semper. Init
-						Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+					<p class="mb-0">Welcome to Dhanvantri Hospital, where compassionate care meets medical excellence. At Dhanvantri, 
+            we are dedicated to providing the highest quality healthcare services to our patients, guided by our commitment to professionalism, 
+            integrity, and innovation.Established with the vision of offering comprehensive healthcare solutions, Dhanvantri 
+            Hospital has been serving our community with distinction for 75 years. Our journey began with a simple yet profound goal: 
+            to create a healthcare institution that prioritizes patient well-being above all else.</p>
 					<a href="#portfolio.html" class="btn-style btn-primary btn mt-lg-5 mt-4">Learn More</a>
 				</div>
 				<div class="col-lg-4 content-photo mt-lg-0 mt-md-5 mt-4">
@@ -163,8 +242,7 @@
     <div class="conuter-66-info py-5">
         <div class="container py-lg-5">
             <h3 class="title text-center mb-4">Certified by the Joint Commission</h3>
-            <p class="title-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque repellat
-                nulla, corrupti accusamus ad perspiciatis temporibus cupiditate maxime aperiam distinctio!</p>
+            <p class="title-text text-center"></p>
             <div class="counter-grids-info row text-center">
                 <div class="col-lg-3 col-6">
                     <div class="counter-gd">
@@ -208,11 +286,8 @@
                 </div>
                 <div class="offset-lg-1 col-lg-6 left-cont sec-grid-ab mt-lg-0 mt-5">
                     <h4>Private Care Service -<br>Certified by the Joint Commission</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. minus nec essitatibus ex asperiores 
-                        nulla eos minima nihil similique, veritatis deserunt elit. Quia, voluptas?</p>
-                    <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptas? 
-                        Cupiditate reprehenderit soluta sapiente laboriosam quam obcaecati voluptas. Magnam dolor 
-                        reiciendis culpa saepe iure ducimus adipisci id delectus, reprehenderit quos.</p>
+                    <p></p>
+                    <p class="mt-3">At Dhanvantri Hospital, we understand the importance of accessible and convenient healthcare services. That's why we offer comprehensive outdoor checkup facilities to address your healthcare needs efficiently and effectively..</p>
                     <a href="about.html" class="btn btn-primary btn-style mt-sm-5 mt-4"> Learn More </a>
                 </div>
             </div>
@@ -228,8 +303,7 @@
 
 				<div class="col-lg-6 offset-lg-6">
 						<h4>Keep improving our hospital</h4>
-						<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio consectetur. 
-                            Vivamus a ligula quam. Ut blandit eu leo non suscipit. Duis feugiat tortor sed.</p>
+						<p></p>
 					<div class="bars-main-info mt-lg-5 mt-4">
 						<div class="progress-info mb-4">
 							<h6 class="progress-tittle">Activity Level</h6>
@@ -296,7 +370,7 @@
 				</div>
 				<div class="col-lg-3 col-6 team-main-19 mt-lg-0 mt-4">
 					<div class="column-19">
-						<a href="team-single.html"><img class="img-fluid" src="assets/images/doctor1.jpg" alt=" "></a>
+						<a href="team-single.html"><img class="img-fluid" src="assets/images/doctor.jpg" alt=" "></a>
 					</div>
 					<div class="right-team-9">
 						<h6><a href="team-single.html" class="title-team-32">Kabir Singh</a></h6>
@@ -382,7 +456,7 @@
       </div>
       <div class="midd-footer-28 align-center py-lg-4 py-3 mt-md-5 mt-3">
         <div class="container">
-          <p class="copy-footer-28 text-center"> &copy; 2023 dhanvantri. All Rights Reserved & Design by CyberX </p>
+          <p class="copy-footer-28 text-center"> &copy; 2024 dhanvantri. All Rights Reserved & Design For Frt Projects</p>
         </div>
       </div>
       </div>
